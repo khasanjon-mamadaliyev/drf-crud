@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "django-rest-crud"
+version = "0.1.0"
+description = ""
+authors = ["Khasanjon Mamadaliyev <khasanjon.eng@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "root" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.1"
+djangorestframework = "^3.14.0"
+drf-yasg = "^1.21.5"
+pytest-django = "^4.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "root.settings"
+python_files = "tests.py test_*.py *_tests.py"
